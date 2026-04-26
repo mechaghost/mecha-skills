@@ -36,7 +36,7 @@ Each reviewer needs the same rich context: goal, plan, repo shape, diff, relevan
 ## Review Checklist
 
 - Correctness: Does the change satisfy the goal without regressions?
-- Modularity: Are responsibilities clear, boundaries small, and dependencies reasonable?
+- Modularity: Are responsibilities clear, boundaries small, and dependencies reasonable? Look for copy-pasted structures, especially repeated cards, tables, panels, forms, or information layouts rebuilt differently across pages instead of using shared components or presentation helpers.
 - Efficiency: Are algorithms, rendering, IO, network calls, memory, and bundle/runtime costs appropriate?
 - Security: Are input handling, auth, secrets, permissions, dependencies, and data exposure safe for this project?
 - Tests: Are behavior changes covered at the right level? Did verification actually run?
