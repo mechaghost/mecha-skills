@@ -13,15 +13,15 @@ Use this while making changes in a repo. The job is to leave a narrow, reviewabl
 - Check `git status --short`.
 - Notice user changes and protect them.
 - Decide the smallest coherent change that satisfies the request.
-- For multi-step work, derive the active execution checklist/todo tracker from a hardened implementation plan, not from first impressions.
-- A plan is hardened only after a three-expert plan review has critiqued it and the agent has iterated to a good decision.
+- For multi-step work, derive the execution checklist/todo tracker from a hardened plan, not from first impressions.
+- A plan is hardened only after three expert perspectives critique it and the agent resolves the important concerns.
 - For behavior changes, write or identify a failing test first when practical.
 
 ## While Editing
 
 - Keep the diff scoped to the request.
 - Execute one checklist item at a time and update status as evidence changes.
-- If execution reveals a plan flaw, pause and revise the plan/todos before continuing.
+- If execution reveals a plan flaw, revise the plan/todos before continuing.
 - Do not reorder, reformat, or refactor unrelated code.
 - Use structured APIs and parsers instead of fragile string manipulation when available.
 - Add comments only where they clarify non-obvious logic.
