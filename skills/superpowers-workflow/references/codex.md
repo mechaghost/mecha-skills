@@ -15,7 +15,7 @@
 - Avoid worktrees, feature branches, and PRs unless the user explicitly requests them.
 - Make clear checkpoint commits after verified units of work.
 - Before committing, inspect `git status --short` and the staged diff.
-- Push `main` when the user asks to publish or when the repo workflow calls for syncing finished work.
+- Push checkpoint commits to `origin/main` by default unless the user explicitly says not to push.
 
 ## Communication
 

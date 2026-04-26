@@ -16,7 +16,7 @@ Claude Code can use these files as skills if copied or symlinked into the user's
 - Preserve the same verification rule: do not claim success without fresh evidence.
 - Treat "todos" as either Claude Code's todo mechanism or a plain execution checklist.
 - Treat "three-expert plan review" as inline critique unless the environment provides a separate reviewer or task mechanism.
-- Preserve the solo git strategy unless overridden locally: work on `main`, use checkpoint commits, and do not create PRs or worktrees by default.
+- Preserve the solo git strategy unless overridden locally: work on `main`, use checkpoint commits, push to `origin/main`, and do not create PRs or worktrees by default.
 
 ## Suggested Pairing
 

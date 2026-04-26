@@ -22,7 +22,7 @@ This repo assumes a solo, checkpoint-oriented workflow:
 - avoid worktrees, feature branches, and PRs unless explicitly requested
 - make clear checkpoint commits when a coherent unit of work is done
 - verify before committing
-- push `main` when finished work should be synced
+- always push checkpoint commits to `origin/main`
 
 ## Install For Codex
 
