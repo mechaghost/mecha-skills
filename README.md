@@ -9,7 +9,7 @@ These skills are written for Codex first, but the `SKILL.md` files are intention
 The intended workflow is:
 
 ```text
-repo context -> brainstorming/design -> implementation plan -> three-expert plan review -> hardened todos -> scoped execution -> verification -> concise final answer
+repo context -> brainstorming/design -> implementation plan -> three-expert plan review -> hardened todos -> scoped execution -> code review -> verification -> concise final answer
 ```
 
 The three-expert review is subject-aware. For a browser game, the reviewers might cover gameplay feel, renderer/performance, and UI/playtesting. For a backend feature, they might cover domain correctness, architecture, and reliability/security.
@@ -79,6 +79,7 @@ In Claude Code, treat `todos` as either Claude's todo mechanism or a plain execu
 | `repo-onboarding` | Guides fast repo-aware context gathering before edits. |
 | `superpowers-workflow` | Adds disciplined planning, debugging, review, todo, and verification habits. |
 | `code-change-discipline` | Keeps code/docs/config edits scoped, reviewable, and evidence-backed. |
+| `code-review` | Reviews changes through project-specific experts for modularity, efficiency, security, and correctness. |
 | `game-dev-workflow` | Covers browser-game planning, architecture, assets, UI, and playtesting. |
 
 ## Account Skills Vs Repo Instructions
@@ -106,6 +107,8 @@ skills/
   repo-onboarding/
     SKILL.md
   code-change-discipline/
+    SKILL.md
+  code-review/
     SKILL.md
 bootstrap.sh
 README.md

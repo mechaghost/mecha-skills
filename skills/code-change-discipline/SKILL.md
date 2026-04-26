@@ -22,6 +22,7 @@ Use this while making changes in a repo. The job is to leave a narrow, reviewabl
 - Keep the diff scoped to the request.
 - Execute one checklist item at a time and update status as evidence changes.
 - If execution reveals a plan flaw, revise the plan/todos before continuing.
+- For non-trivial changes, run a project-specific code review before final verification.
 - Do not reorder, reformat, or refactor unrelated code.
 - Use structured APIs and parsers instead of fragile string manipulation when available.
 - Add comments only where they clarify non-obvious logic.

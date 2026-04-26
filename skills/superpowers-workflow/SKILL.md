@@ -17,10 +17,11 @@ Use this to keep agentic engineering deliberate: understand first, change narrow
 6. For bugs, reproduce and find root cause before proposing fixes.
 7. Make scoped changes. Do not bundle unrelated refactors.
 8. Preserve user changes. Never reset or overwrite work you did not make.
-9. Verify with fresh commands before saying work is complete.
-10. Make a checkpoint commit on `main` when a coherent unit of work is done, unless the user says not to commit.
-11. Push checkpoint commits to `origin/main` unless the user says not to push.
-12. Keep the final answer concise, evidence-based, and honest about gaps.
+9. For non-trivial changes, review the result with project-specific expert perspectives before final verification.
+10. Verify with fresh commands before saying work is complete.
+11. Make a checkpoint commit on `main` when a coherent unit of work is done, unless the user says not to commit.
+12. Push checkpoint commits to `origin/main` unless the user says not to push.
+13. Keep the final answer concise, evidence-based, and honest about gaps.
 
 ## Debugging Discipline
 
@@ -34,7 +35,7 @@ Use this to keep agentic engineering deliberate: understand first, change narrow
 
 For multi-step work:
 
-design -> implementation plan -> three-expert plan review -> resolved critiques -> execution checklist/todo tracker -> execution.
+design -> implementation plan -> three-expert plan review -> resolved critiques -> execution checklist/todo tracker -> execution -> code review -> verification.
 
 Do not create or execute todos before the plan has passed review. Todos are execution state, not planning state.
 
