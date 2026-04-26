@@ -18,7 +18,8 @@ Use this to keep agentic engineering deliberate: understand first, change narrow
 7. Make scoped changes. Do not bundle unrelated refactors.
 8. Preserve user changes. Never reset or overwrite work you did not make.
 9. Verify with fresh commands before saying work is complete.
-10. Keep the final answer concise, evidence-based, and honest about gaps.
+10. Make a checkpoint commit on `main` when a coherent unit of work is done, unless the user says not to commit.
+11. Keep the final answer concise, evidence-based, and honest about gaps.
 
 ## Debugging Discipline
 
@@ -81,6 +82,14 @@ A todo is ready only when it answers:
 - What acceptance criteria would make a skeptical reviewer agree the work is done?
 
 If any answer is missing, refine the plan before executing.
+
+## Git Strategy
+
+- Default to working directly on `main` for solo projects.
+- Do not create feature branches, worktrees, or pull requests unless the user explicitly asks.
+- Use small checkpoint commits after verified units of work.
+- Commit messages should be clear and specific about the completed change.
+- Before committing, check `git status --short`, review the staged diff, and verify the work.
 
 ## Platform Notes
 

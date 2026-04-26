@@ -1,38 +1,65 @@
 # Mecha Skills
 
-Portable AI-agent skills for repo-aware engineering, brainstorming, game development, and disciplined verification.
+Portable AI-agent skills for the way I like agents to work: brainstorm before creative work, understand the repo before editing, make scoped changes, protect user edits, use tests or verification early, and do not claim success without evidence.
+
+These skills are written for Codex first, but the `SKILL.md` files are intentionally portable and can be adapted for Claude Code.
+
+## What This Gives An Agent
+
+The intended workflow is:
+
+```text
+repo context -> brainstorming/design -> implementation plan -> three-expert plan review -> hardened todos -> scoped execution -> verification -> concise final answer
+```
+
+The three-expert review is subject-aware. For a browser game, the reviewers might cover gameplay feel, renderer/performance, and UI/playtesting. For a backend feature, they might cover domain correctness, architecture, and reliability/security.
+
+## Git Strategy
+
+This repo assumes a solo, checkpoint-oriented workflow:
+
+- work directly on `main`
+- avoid worktrees, feature branches, and PRs unless explicitly requested
+- make clear checkpoint commits when a coherent unit of work is done
+- verify before committing
+- push `main` when finished work should be synced
 
 ## Install For Codex
 
-From this repo:
+Clone the repo, then run:
 
 ```bash
+git clone https://github.com/mechaghost/mecha-skills.git
+cd mecha-skills
 ./bootstrap.sh
 ```
 
-By default, the script syncs only the skills in this repo into:
+By default, `bootstrap.sh` syncs the skills in this repo into:
 
 ```text
 ~/.codex/skills
 ```
 
-It creates directories as needed, updates matching skill folders, and does not delete unrelated skills. To install somewhere else:
+It creates directories as needed, updates only these skill folders, prints what changed, and does not delete unrelated skills.
+
+To install somewhere else:
 
 ```bash
 CODEX_SKILLS_DIR=/path/to/skills ./bootstrap.sh
 ```
 
-## Sync Later
+## Update Later
 
-Pull or copy the latest version of this repo, then run:
+From this repo:
 
 ```bash
+git pull
 ./bootstrap.sh
 ```
 
-The script is safe to run repeatedly. It prints which files changed.
+The script is safe to run repeatedly.
 
-## Adapt For Claude Code
+## Use With Claude Code
 
 Copy or symlink the folders under `skills/` into the Claude Code skills directory used by your setup, commonly:
 
@@ -40,18 +67,46 @@ Copy or symlink the folders under `skills/` into the Claude Code skills director
 ~/.claude/skills
 ```
 
-The `SKILL.md` files use portable YAML frontmatter with `name` and `description`. Codex-specific operational notes live in `skills/superpowers-workflow/references/codex.md`; Claude Code adaptation notes live in `skills/superpowers-workflow/references/claude-code.md`.
+The skill files use standard YAML frontmatter with `name` and `description`. Codex-specific notes live in `skills/superpowers-workflow/references/codex.md`; Claude Code adaptation notes live in `skills/superpowers-workflow/references/claude-code.md`.
 
-## Account Skills Vs Repo Instructions
-
-Account-level skills, such as these, express reusable habits across projects: brainstorm before creative work, read repo context before editing, preserve user changes, prefer tests, debug systematically, and verify before claiming success.
-
-Repo-local instructions, such as `AGENTS.md`, are project-specific. They should define local commands, architecture, conventions, and constraints. When repo-local instructions conflict with account-level skills, repo-local instructions win.
+In Claude Code, treat `todos` as either Claude's todo mechanism or a plain execution checklist. Treat `three-expert plan review` as inline critique unless your environment provides a separate reviewer/task mechanism.
 
 ## Included Skills
 
-- `brainstorming`: clarify creative, product, feature, UX, and game work before implementation.
-- `game-dev-workflow`: browser-game planning, architecture, assets, UI, and playtesting.
-- `superpowers-workflow`: disciplined engineering loop inspired by Superpowers.
-- `repo-onboarding`: fast repo-aware context gathering before edits.
-- `code-change-discipline`: scoped changes, user-change preservation, debugging, and verification.
+| Skill | Purpose |
+| --- | --- |
+| `brainstorming` | Clarifies creative, product, feature, UX, and game work before implementation. |
+| `repo-onboarding` | Guides fast repo-aware context gathering before edits. |
+| `superpowers-workflow` | Adds disciplined planning, debugging, review, todo, and verification habits. |
+| `code-change-discipline` | Keeps code/docs/config edits scoped, reviewable, and evidence-backed. |
+| `game-dev-workflow` | Covers browser-game planning, architecture, assets, UI, and playtesting. |
+
+## Account Skills Vs Repo Instructions
+
+These are account-level skills. They express reusable habits across projects.
+
+Repo-local instructions such as `AGENTS.md`, `CLAUDE.md`, or project docs are more specific. They should define local commands, architecture, conventions, and constraints. When repo-local instructions conflict with these skills, the repo-local instructions win.
+
+## Repository Layout
+
+```text
+skills/
+  brainstorming/
+    SKILL.md
+  game-dev-workflow/
+    SKILL.md
+    references/
+      browser-games.md
+      playtesting.md
+  superpowers-workflow/
+    SKILL.md
+    references/
+      codex.md
+      claude-code.md
+  repo-onboarding/
+    SKILL.md
+  code-change-discipline/
+    SKILL.md
+bootstrap.sh
+README.md
+```

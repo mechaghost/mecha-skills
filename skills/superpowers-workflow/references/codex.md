@@ -9,6 +9,14 @@
 - Read repo-local `AGENTS.md` and project docs when present.
 - If there are user changes in files you need, read them and work with them.
 
+## Git Strategy
+
+- Default to solo flow on `main`.
+- Avoid worktrees, feature branches, and PRs unless the user explicitly requests them.
+- Make clear checkpoint commits after verified units of work.
+- Before committing, inspect `git status --short` and the staged diff.
+- Push `main` when the user asks to publish or when the repo workflow calls for syncing finished work.
+
 ## Communication
 
 - Give short progress updates during longer work.
