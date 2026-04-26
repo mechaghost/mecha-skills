@@ -14,6 +14,8 @@ repo context -> brainstorming/design -> implementation plan -> three-expert plan
 
 The three-expert review is subject-aware. For a browser game, the reviewers might cover gameplay feel, renderer/performance, and UI/playtesting. For a backend feature, they might cover domain correctness, architecture, and reliability/security.
 
+The code-review pass checks modularity, efficiency, and security, including repeated UI or information-presentation patterns that should become shared components or helpers.
+
 ## Git Strategy
 
 This repo assumes a solo, checkpoint-oriented workflow:
@@ -79,7 +81,7 @@ In Claude Code, treat `todos` as either Claude's todo mechanism or a plain execu
 | `repo-onboarding` | Guides fast repo-aware context gathering before edits. |
 | `superpowers-workflow` | Adds disciplined planning, debugging, review, todo, and verification habits. |
 | `code-change-discipline` | Keeps code/docs/config edits scoped, reviewable, and evidence-backed. |
-| `code-review` | Reviews changes through project-specific experts for modularity, efficiency, security, and correctness. |
+| `code-review` | Reviews changes through project-specific experts for correctness, modularity, efficiency, and security, including duplicated UI/presentation patterns. |
 | `game-dev-workflow` | Covers browser-game planning, architecture, assets, UI, and playtesting. |
 
 ## Account Skills Vs Repo Instructions
