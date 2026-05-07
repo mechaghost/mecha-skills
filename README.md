@@ -4,6 +4,12 @@ Portable AI-agent skills for the way I like agents to work: brainstorm before cr
 
 These skills are written for Codex first, but the `SKILL.md` files are intentionally portable and can be adapted for Claude Code.
 
+## Warning
+
+This is a strongly opinionated personal workflow repo, not a neutral starter kit. It assumes solo work on `main`, checkpoint commits, push-to-`origin/main`, three-expert planning/review passes, and my preferred agent habits.
+
+The bootstrap script updates only the skill folders shipped by this repo and does not delete unrelated skill folders. If you already have a same-named skill such as `brainstorming` or `code-review`, that matching folder will be replaced with this repo's version.
+
 ## What This Gives An Agent
 
 The intended workflow is:
