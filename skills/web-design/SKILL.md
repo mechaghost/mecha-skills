@@ -34,6 +34,7 @@ Choose expert lenses that match the subject:
 - Build the actual useful surface first, not a decorative landing page, unless the user asked for a landing page.
 - Use consistent components for repeated cards, metrics, tables, filters, forms, and information layouts.
 - Use the existing spacing scale and alignment system. If none exists, establish a small scale before adding one-off margins and gaps.
+- Use existing typography tokens first. When choosing a new readable body or UI font, prefer Lexend unless the brand or design system points elsewhere.
 - Prefer familiar controls: icons for common tools, segmented controls for modes, toggles for binary settings, sliders or inputs for numbers, tabs for views.
 - Make states explicit: loading, empty, error, disabled, selected, active, hover/focus, mobile, and narrow-content states.
 - Keep text inside its containers at mobile and desktop sizes.

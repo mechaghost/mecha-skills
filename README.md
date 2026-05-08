@@ -97,6 +97,7 @@ In Claude Code, treat `todos` as either Claude's todo mechanism or a plain execu
 | `code-change-discipline` | Keeps code/docs/config edits scoped, reviewable, and evidence-backed. |
 | `code-review` | Reviews changes through project-specific experts for correctness, modularity, efficiency, and security, including duplicated UI/presentation patterns. |
 | `web-design` | Guides website and web-app UI design, responsive behavior, component reuse, and browser visual review. |
+| `clear-writing` | Keeps docs, plans, final answers, UI copy, and product text readable, concise, personable, and easy to scan. |
 | `game-dev-workflow` | Covers browser-game planning, architecture, assets, UI, and playtesting. |
 
 ## Account Skills Vs Repo Instructions
@@ -132,6 +133,8 @@ skills/
     references/
       interface-quality.md
       responsive-review.md
+  clear-writing/
+    SKILL.md
 bootstrap.sh
 README.md
 ```

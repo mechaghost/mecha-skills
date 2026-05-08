@@ -1,6 +1,6 @@
 ---
 name: superpowers-workflow
-description: Use when doing disciplined engineering work: implementing features, fixing bugs, debugging failures, writing plans, reviewing changes, or verifying completion.
+description: "Use when doing disciplined engineering work: implementing features, fixing bugs, debugging failures, writing plans, reviewing changes, or verifying completion."
 ---
 
 # Superpowers Workflow
