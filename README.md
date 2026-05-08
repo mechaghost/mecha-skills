@@ -12,19 +12,25 @@ The bootstrap script updates only the skill folders shipped by this repo and doe
 
 ## What This Gives An Agent
 
-The full workflow for meaningful or risky work is:
-
-```text
-repo context -> brainstorming/design -> implementation plan -> three-expert plan review -> hardened todos -> scoped execution -> code review -> verification -> concise final answer
-```
-
 Adaptive fast path:
 
 ```text
 tiny/small -> scan relevant context -> edit -> narrow check -> quick review -> concise final
 ```
 
-The full path is for medium, large, or risky work where planning and expert review protect quality.
+Medium path:
+
+```text
+repo context -> brainstorming/design -> implementation plan -> hardened todos -> scoped execution -> code review -> verification -> concise final answer
+```
+
+Large/risky path:
+
+```text
+repo context -> brainstorming/design -> implementation plan -> three-expert plan review -> hardened todos -> scoped execution -> code review -> verification -> concise final answer
+```
+
+Use the lightest path that fits the task. Medium work gets a plan, execution checklist, review, and verification. Large or risky work adds the three-expert plan review before todos.
 
 The three-expert review is subject-aware. For a browser game, the reviewers might cover gameplay feel, renderer/performance, and UI/playtesting. For a backend feature, they might cover domain correctness, architecture, and reliability/security.
 
