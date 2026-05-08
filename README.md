@@ -6,17 +6,25 @@ These skills are written for Codex first, but the `SKILL.md` files are intention
 
 ## Warning
 
-This is a strongly opinionated personal workflow repo, not a neutral starter kit. It assumes solo work on `main`, checkpoint commits, push-to-`origin/main`, three-expert planning/review passes, and my preferred agent habits.
+This is a strongly opinionated personal workflow repo, not a neutral starter kit. It assumes solo work on `main`, checkpoint commits, push-to-`origin/main`, adaptive planning/review depth, and my preferred agent habits.
 
 The bootstrap script updates only the skill folders shipped by this repo and does not delete unrelated skill folders. If you already have a same-named skill such as `brainstorming` or `code-review`, that matching folder will be replaced with this repo's version.
 
 ## What This Gives An Agent
 
-The intended workflow is:
+The full workflow for meaningful or risky work is:
 
 ```text
 repo context -> brainstorming/design -> implementation plan -> three-expert plan review -> hardened todos -> scoped execution -> code review -> verification -> concise final answer
 ```
+
+Adaptive fast path:
+
+```text
+tiny/small -> scan relevant context -> edit -> narrow check -> quick review -> concise final
+```
+
+The full path is for medium, large, or risky work where planning and expert review protect quality.
 
 The three-expert review is subject-aware. For a browser game, the reviewers might cover gameplay feel, renderer/performance, and UI/playtesting. For a backend feature, they might cover domain correctness, architecture, and reliability/security.
 

@@ -22,7 +22,12 @@ Use `rg`, `git diff`, `git status --short`, and targeted file reads. Do not revi
 
 ## Expert Review Team
 
-For meaningful changes, review from at least three subject-specific expert perspectives. Pick experts for the actual project, not generic personas.
+Use the lightest review that fits the risk:
+
+- Quick pass: bugs, regressions, verification gaps, obvious copy-paste, and user-change safety.
+- Deep pass: three subject-specific expert perspectives for meaningful, risky, or multi-system changes.
+
+For the deep pass, pick experts for the actual project, not generic personas.
 
 Examples:
 

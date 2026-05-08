@@ -11,17 +11,27 @@ Use this to keep agentic engineering deliberate: understand first, change narrow
 
 1. Read instructions: user request, `AGENTS.md`, repo docs, and relevant files.
 2. Inspect current state: `git status --short`, recent diffs, and existing patterns.
-3. For multi-step work, write an implementation plan before creating an execution checklist or editing.
-4. Review the plan from three subject-matter perspectives, iterate until the critiques converge, then convert it into execution todos.
-5. Prefer tests before implementation when behavior changes and the repo has a practical test path.
-6. For bugs, reproduce and find root cause before proposing fixes.
-7. Make scoped changes. Do not bundle unrelated refactors.
-8. Preserve user changes. Never reset or overwrite work you did not make.
-9. For non-trivial changes, review the result with project-specific expert perspectives before final verification.
-10. Verify with fresh commands before saying work is complete.
-11. Make a checkpoint commit on `main` when a coherent unit of work is done, unless the user says not to commit.
-12. Push checkpoint commits to `origin/main` unless the user says not to push.
-13. Keep the final answer concise, evidence-based, and honest about gaps.
+3. Choose the lightest workflow that fits the task size and risk.
+4. For multi-step or risky work, write an implementation plan before creating an execution checklist or editing.
+5. Review large/risky plans from three subject-matter perspectives, iterate until the critiques converge, then convert them into execution todos.
+6. Prefer tests before implementation when behavior changes and the repo has a practical test path.
+7. For bugs, reproduce and find root cause before proposing fixes.
+8. Make scoped changes. Do not bundle unrelated refactors.
+9. Preserve user changes. Never reset or overwrite work you did not make.
+10. For non-trivial changes, review the result with project-specific expert perspectives before final verification.
+11. Verify with fresh commands before saying work is complete.
+12. Make a checkpoint commit on `main` when a coherent unit of work is done, unless the user says not to commit.
+13. Push checkpoint commits to `origin/main` unless the user says not to push.
+14. Keep the final answer concise, evidence-based, and honest about gaps.
+
+## Task Size Ladder
+
+- Tiny: one file or obvious text/config tweak. Scan relevant context, edit, run the narrowest check, report.
+- Small: localized behavior or UI change. Brief plan, focused edit, quick review, focused verification.
+- Medium: multi-file feature, meaningful UI, or behavior change. Plan, execution checklist, project-specific review, verification.
+- Large/risky: architecture, security, payments, data loss, game systems, complex UI, or repeated failed fixes. Use three-expert plan review before todos.
+
+Use the heavier path when consequences are high. Use the fast path when ceremony would cost more than it protects.
 
 ## Debugging Discipline
 
@@ -33,25 +43,29 @@ Use this to keep agentic engineering deliberate: understand first, change narrow
 
 ## Required Sequence
 
-For multi-step work:
+For medium work:
+
+design -> implementation plan -> execution checklist/todo tracker -> execution -> code review -> verification.
+
+For large/risky work:
 
 design -> implementation plan -> three-expert plan review -> resolved critiques -> execution checklist/todo tracker -> execution -> code review -> verification.
 
-Do not create or execute todos before the plan has passed review. Todos are execution state, not planning state.
+Do not create or execute todos before the plan is clear enough to execute. For large/risky work, that means three-expert review first. Todos are execution state, not planning state.
 
 ## Planning Discipline
 
 - Each plan item should name files or systems, expected behavior, and verification.
 - Keep plans small enough to produce working, testable increments.
 - Review the plan for missing requirements, vague tasks, risky ordering, and unverified assumptions.
-- For multi-step work, obtain three domain-expert reviews using whatever review mechanism is available, or write the critiques inline.
+- For large/risky work, obtain three domain-expert reviews using whatever review mechanism is available, or write the critiques inline.
 - Do not promote the plan to todos until the approach is specific, ordered, and defensible.
 - Update checklist status as work progresses; do not mark everything complete only at the end.
 - Reject todos that use vague verbs like "improve", "polish", "fix visuals", or "handle edge cases" unless they include observable acceptance criteria and a verification method.
 
 ## Three-Expert Plan Review
 
-Before converting a plan into todos, choose three reviewers whose expertise covers different dimensions of the actual subject. Do not use fixed generic personas when the work calls for specialist judgment.
+Before converting a large/risky plan into todos, choose three reviewers whose expertise covers different dimensions of the actual subject. Do not use fixed generic personas when the work calls for specialist judgment.
 
 Examples:
 
