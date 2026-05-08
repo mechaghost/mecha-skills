@@ -5,9 +5,11 @@ Use this when checking browser behavior for web UI changes.
 ## Minimum Pass
 
 - Check one desktop viewport and one mobile viewport.
+- For meaningful page work, also check a tablet or mid-width viewport.
 - Verify navigation, primary action, important content, and repeated components.
 - Confirm text does not overflow, overlap, or become unreadable.
 - Confirm fixed-format UI elements have stable dimensions.
+- Confirm gaps, columns, and alignment adapt intentionally instead of merely shrinking.
 - Check hover/focus/active states where interaction matters.
 - For forms, check labels, validation, keyboard focus, and disabled/loading states.
 
