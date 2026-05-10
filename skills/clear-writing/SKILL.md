@@ -34,6 +34,7 @@ Avoid inflated claims, generic AI phrasing, false warmth, vague value props, and
 - Use bullets or steps when they improve scanning.
 - Keep headings short and functional.
 - Put context after the main point, not before it.
+- Do not use em dashes. Use a period, comma, colon, semicolon, parentheses, or a short rewrite instead.
 - Stop cleanly instead of circling back.
 
 ## Editing Pass
@@ -45,6 +46,7 @@ Ask:
 - Can a long sentence become two cleaner ones?
 - Can an abstract claim become a concrete action, result, or example?
 - Can the reader understand what to do next within a few seconds?
+- Are there any em dashes to remove?
 
 For final answers, prefer: what changed, what was verified, and any remaining gap or risk. Do not recap every step unless the user asks.
 
